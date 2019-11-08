@@ -19,3 +19,4 @@ sshd_authorized_keys_file:
 sshd_allow_users: []
 sshd_password_authentication: "yes"
 sshd_permit_empty_password: "no"
+sshd_x11_forwarding: "yes"

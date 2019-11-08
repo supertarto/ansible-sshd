@@ -104,7 +104,7 @@ UsePAM yes
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
 #GatewayPorts no
-X11Forwarding yes
+X11Forwarding {{ sshd_x11_forwarding }}
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes

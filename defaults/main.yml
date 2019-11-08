@@ -1,5 +1,5 @@
 ---
-sshd_banner_needed: true
+sshd_banner_needed: false
 sshd_service_name: ssh
 sshd_banner_path: /etc/ssh/sshd-banner
 sshd_config_path: /etc/ssh/sshd_config

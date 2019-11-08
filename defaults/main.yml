@@ -1,2 +1,21 @@
 ---
+sshd_banner_needed: true
+sshd_service_name: ssh
+sshd_banner_path: /etc/ssh/sshd-banner
+sshd_config_path: /etc/ssh/sshd_config
 
+sshd_port: 22
+sshd_listen_address:
+  - 0.0.0.0
+sshd_syslog_facility: AUTH
+sshd_log_level: INFO
+sshd_login_grace_time: 2m
+sshd_permit_root_login: "no"
+sshd_strict_mode: "yes"
+sshd_max_auth_tries: 6
+sshd_max_sessions: 10
+sshd_authorized_keys_file:
+  - "%h/.ssh/authorized_keys"
+sshd_allow_users: []
+sshd_password_authentication: "yes"
+sshd_permit_empty_password: "no"

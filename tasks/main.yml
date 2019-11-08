@@ -14,7 +14,7 @@
 
 - name: SSHD banner
   template:
-    src: sshd-banner.j2
+    src: sshd_banner.j2
     dest: "{{ sshd_banner_path }}"
     owner: root
     group: root

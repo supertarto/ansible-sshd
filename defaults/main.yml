@@ -20,3 +20,9 @@ sshd_allow_users: []
 sshd_password_authentication: "yes"
 sshd_permit_empty_password: "no"
 sshd_x11_forwarding: "yes"
+
+# usage: sshd_banner_content: |
+# <your text here, multiline if needed>
+sshd_banner_content: |
+  This is a sshd banner
+  a multiline text

@@ -1,6 +1,8 @@
 # ansible-sshd
 Ansible role to install and configure SSHD
 
+## Requirements
+None
 ## Tested plateform
 * Debian 9 (Stretch)
 * Debian 10 (Buster)
@@ -42,7 +44,18 @@ sshd_permit_empty_password: "no"
 sshd_x11_forwarding: "yes"
 ```
 
-## Examples
+## Example(s)
+```yml
+---
+- hosts: somehost
+  roles:
+    - supertarto.sshd
+  vars:
+    sshd_password_authentication: "yes"
+    sshd_permit_empty_password: "no"
+    sshd_x11_forwarding: "yes"
+
+```
 ## Installation
 ```
 ansible-galaxy install supertarto.sshd

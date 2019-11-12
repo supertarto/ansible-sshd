@@ -1,4 +1,6 @@
-# ansible-sshd
+# Ansible SSHD
+[![Build Status](https://travis-ci.org/supertarto/ansible-sshd.svg?branch=master)](https://travis-ci.org/supertarto/ansible-sshd)
+
 Ansible role to install and configure SSHD
 
 ## Requirements
@@ -13,6 +15,12 @@ Do you need a banner ? If set to true, the banner will be created in the path yo
 ```yaml
 sshd_banner_needed: true
 sshd_banner_path: /etc/ssh/sshd-banner
+```
+Content of the sshd banner file. Can be a multiline text.
+```yml
+sshd_banner_content: |
+  This is a sshd banner
+  a multiline text
 ```
 The name of the sshd service.
 ```yaml

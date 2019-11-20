@@ -6,8 +6,8 @@ env:
   global:
     - ROLE_NAME: sshd
   matrix:
-    - DISTRIB: debian10:v1
-    - DISTRIB: debian9:v1
+    - DISTRIB: debian10:latest
+    - DISTRIB: debian9:latest
 
 install:
   - pip install molecule docker

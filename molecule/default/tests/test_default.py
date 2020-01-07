@@ -6,6 +6,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
+ansible_variables = host.ansible.get_variables()
+
+
+def test_myvar_using_get_variables(host):
+    assert 'sshd_service_name' in ansible_variables
+    assert 'sshd_packages' in ansible_variables
+
+
 def test_hosts_file(host):
     f = host.file('/etc/hosts')
 
@@ -15,11 +23,11 @@ def test_hosts_file(host):
 
 
 def test_sshd_is_installed(host):
-    sshd = host.package("ssh")
+    sshd = ansible_variables['sshd_packages']
     assert sshd.is_installed
 
 
 def test_sshd_is_running_and_enabled(host):
-    sshd = host.service("ssh")
+    sshd = ansible_variables['sshd_service_name']
     assert sshd.is_running
     assert sshd.is_enabled

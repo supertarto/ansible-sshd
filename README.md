@@ -6,7 +6,6 @@ Ansible role to install and configure SSHD
 ## Requirements
 None
 ## Tested plateform
-* Debian 9 (Stretch)
 * Debian 10 (Buster)
 
 ## Role variables

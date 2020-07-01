@@ -6,7 +6,7 @@ env:
   global:
     - ROLE_NAME: sshd
   matrix:
-    - DISTRIB: debian10:latest
+    - MOLECULE_DISTRIB: debian10:latest
 
 install:
   - pip install molecule yamllint ansible-lint docker

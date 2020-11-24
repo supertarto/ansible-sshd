@@ -1,5 +1,5 @@
 # Ansible SSHD
-[![Build Status](https://travis-ci.com/supertarto/ansible-sshd.svg?branch=master)](https://travis-ci.com/supertarto/ansible-sshd)
+[![CI](https://github.com/supertarto/ansible-sshd/workflows/CI/badge.svg?event=push)](https://github.com/supertarto/ansible-sshd/actions?query=workflow%3ACI)
 
 Ansible role to install and configure SSHD
 

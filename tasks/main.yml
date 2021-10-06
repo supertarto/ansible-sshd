@@ -3,17 +3,17 @@
   include_vars: "{{ ansible_os_family }}.yml"
 
 - name: Define SSHD packages
-  set_fact:
+  ansible.builtin.set_fact:
     sshd_packages: "{{ __sshd_packages | list }}"
   when: sshd_packages is not defined
 
 - name: Install sshd packages
-  package:
+  ansible.builtin.package:
     name: "{{ sshd_packages }}"
     state: present
 
 - name: SSHD banner
-  template:
+  ansible.builtin.template:
     src: sshd_banner.j2
     dest: "{{ sshd_banner_path }}"
     owner: root
@@ -22,7 +22,7 @@
   when: sshd_banner_needed
 
 - name: SSHD configuration file
-  template:
+  ansible.builtin.template:
     src: sshd_config.j2
     dest: "{{ sshd_config_path }}"
     owner: root

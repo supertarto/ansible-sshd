@@ -7,31 +7,39 @@ Ansible role to install and configure SSHD
 None
 ## Tested plateform
 * Debian 10 (Buster)
+* Debian 11 (Buster)
 
 ## Role variables
 
 Do you need a banner ? If set to true, the banner will be created in the path you choose here. 
+
 ```yaml
 sshd_banner_needed: true
 sshd_banner_path: /etc/ssh/sshd-banner
 ```
+
 Content of the sshd banner file. Can be a multiline text.
+
 ```yml
 sshd_banner_content: |
   This is a sshd banner
   a multiline text
 ```
+
 The name of the sshd service.
+
 ```yaml
 sshd_service_name: ssh
 ```
 
 Path where the sshd_config file will be.
+
 ```yaml
 sshd_config_path: /etc/ssh/sshd_config
 ```
 
 List of options in the sshd_config file. Those are the default value.
+
 ```yml
 sshd_port: 22
 sshd_listen_address:
@@ -52,6 +60,7 @@ sshd_x11_forwarding: "yes"
 ```
 
 ## Example(s)
+
 ```yml
 ---
 - hosts: somehost
@@ -63,9 +72,12 @@ sshd_x11_forwarding: "yes"
     sshd_x11_forwarding: "yes"
 
 ```
+
 ## Installation
-```
+
+```bash
 ansible-galaxy install supertarto.sshd
 ```
+
 ## License
 GPL V3.0

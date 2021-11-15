@@ -142,7 +142,7 @@ Subsystem       sftp    /usr/lib/openssh/sftp-server
 #       PermitTTY no
 #       ForceCommand cvs server
 
-{% if sshd_use_sftp_chroot %}
+{% if sshd_use_sftp_chroot_user %}
 Match User {{ sshd_sftp_chroot_user }}
         ChrootDirectory {{ sshd_sftp_chroot_user_directory }}
         ForceCommand internal-sftp 
@@ -150,3 +150,12 @@ Match User {{ sshd_sftp_chroot_user }}
         AllowTcpForwarding no 
         PasswordAuthentication yes
 {% endif %}
+
+{% if sshd_use_sftp_chroot_group %}
+Match Group {{ sshd_sftp_chroot_group }}
+        ChrootDirectory {{ sshd_sftp_chroot_group_directory }}
+        ForceCommand internal-sftp 
+        X11Forwarding no 
+        AllowTcpForwarding no 
+        PasswordAuthentication yes
+{% endif %}        

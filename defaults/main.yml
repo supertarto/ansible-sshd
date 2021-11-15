@@ -21,9 +21,13 @@ sshd_password_authentication: "yes"
 sshd_permit_empty_password: "no"
 sshd_x11_forwarding: "yes"
 
-sshd_use_sftp_chroot: false
+sshd_use_sftp_chroot_user: false
 sshd_sftp_chroot_user: "sftpuser"
 sshd_sftp_chroot_user_directory: "/home/{{ sshd_sftp_chroot_user }}"
+
+sshd_use_sftp_chroot_group: false
+sshd_sftp_chroot_group: "sftpgroup"
+sshd_sftp_chroot_group_directory: "/my/folder/chroot"
 
 # usage: sshd_banner_content: |
 # <your text here, multiline if needed>

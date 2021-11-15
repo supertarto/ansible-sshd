@@ -59,6 +59,17 @@ sshd_permit_empty_password: "no"
 sshd_x11_forwarding: "yes"
 ```
 
+Use for Match User and Match group, to force SFTP. Set to "true" if you want to use those features.
+
+```yml
+sshd_use_sftp_chroot_user: false
+sshd_sftp_chroot_user: "sftpuser"
+sshd_sftp_chroot_user_directory: "/home/{{ sshd_sftp_chroot_user }}"
+
+sshd_use_sftp_chroot_group: false
+sshd_sftp_chroot_group: "sftpgroup"
+sshd_sftp_chroot_group_directory: "/my/folder/chroot"
+```
 ## Example(s)
 
 ```yml

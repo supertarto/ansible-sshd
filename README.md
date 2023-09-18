@@ -7,7 +7,8 @@ Ansible role to install and configure SSHD
 None
 ## Tested plateform
 * Debian 10 (Buster)
-* Debian 11 (Buster)
+* Debian 11 (Bulleyes)
+* Debian 12 (Bookworm)
 
 ## Role variables
 

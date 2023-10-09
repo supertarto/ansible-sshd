@@ -7,7 +7,7 @@ Ansible role to install and configure SSHD
 None
 ## Tested plateform
 * Debian 10 (Buster)
-* Debian 11 (Bulleyes)
+* Debian 11 (Bullseye)
 * Debian 12 (Bookworm)
 
 ## Role variables
@@ -88,7 +88,7 @@ sshd_sftp_chroot_group_directory: "/my/folder/chroot"
 ## Installation
 
 ```bash
-ansible-galaxy install supertarto.sshd
+ansible-galaxy role install supertarto.sshd
 ```
 
 ## License

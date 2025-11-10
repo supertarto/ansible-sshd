@@ -1,14 +1,14 @@
 # Ansible SSHD
-[![CI](https://github.com/supertarto/ansible-sshd/workflows/CI/badge.svg?event=push)](https://github.com/supertarto/ansible-sshd/actions?query=workflow%3ACI)
+[![CI](https://github.com/supertarto/ansible-role-sshd/actions/workflows/ci.yml/badge.svg)](https://github.com/supertarto/ansible-role-sshd/actions/workflows/ci.yml)
 
-Ansible role to install and configure SSHD
+Ansible role to install and configure SSHD on Debian.
 
 ## Requirements
 None
+
 ## Tested plateform
-* Debian 10 (Buster)
-* Debian 11 (Bullseye)
 * Debian 12 (Bookworm)
+* Debian 13 (Trixie)
 
 ## Role variables
 
@@ -83,12 +83,6 @@ sshd_sftp_chroot_group_directory: "/my/folder/chroot"
     sshd_permit_empty_password: "no"
     sshd_x11_forwarding: "yes"
 
-```
-
-## Installation
-
-```bash
-ansible-galaxy role install supertarto.sshd
 ```
 
 ## License

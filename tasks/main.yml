@@ -1,6 +1,6 @@
 ---
 - name: Include OS specific variables.
-  include_vars: "{{ ansible_os_family }}.yml"
+  ansible.builtin.include_vars: "{{ ansible_os_family }}.yml"
 
 - name: Define SSHD packages
   ansible.builtin.set_fact:
@@ -18,7 +18,7 @@
     dest: "{{ sshd_banner_path }}"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   when: sshd_banner_needed
 
 - name: SSHD configuration file
@@ -27,5 +27,5 @@
     dest: "{{ sshd_config_path }}"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: Restart SSHD
